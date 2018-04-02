@@ -14,27 +14,27 @@ class App extends Component {
       <div className="App">
         <Router>
         <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <h1 className="navbar-brand mb-0 h1">Willand Village Hall</h1>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item">
+          <header className="navbar navbar-expand-lg navbar-light bg-light">
+              <h1 className="navbar-brand mb-0 h1">Willand Village Hall</h1>
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item">
+                <span className="nav-link">
+                  <Link to="/">Home</Link>
+                </span>
+              </li>
+              <li className="nav-item">
               <span className="nav-link">
-                <Link to="/">Home</Link>
-              </span>
-            </li>
-            <li className="nav-item">
-            <span className="nav-link">
-              <Link to="/calendar">Events Calendar</Link>
-              </span>
-            </li>
-          </ul>
+                <Link to="/calendar">Events Calendar</Link>
+                </span>
+              </li>
+            </ul>
 
-          </div>
-        </nav>
+            </div>
+          </header>
           <Route exact path="/" component={Home} />
           <Route exact path="/calendar" component={Calendar} />
         </div>

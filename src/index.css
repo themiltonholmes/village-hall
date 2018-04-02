@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+.page-body {
+  margin-top: 1em;
+}
+
 iframe {
   width: 100%;
 }
