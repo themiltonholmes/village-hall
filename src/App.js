@@ -2,7 +2,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import React, { Component } from 'react';
 import './App.css';
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 //Page Imports
 import Home from './views/HomePage';
@@ -39,6 +39,9 @@ class App extends Component {
           <Route exact path="/calendar" component={Calendar} />
         </div>
         </Router>
+        <footer id="footer" className="footer">
+          <p class="text-muted">Developed by Michael Hoe</p>
+        </footer>
       </div>
     );
   }
