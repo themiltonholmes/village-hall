@@ -5,7 +5,7 @@ class Body extends Component {
     render() {
       return (
         <div id="main-body" className="container-fluid">
-            <p>Test</p>
+            <h2>Calendar</h2>
 
             <div className="card">
                 <div className="card-body">
