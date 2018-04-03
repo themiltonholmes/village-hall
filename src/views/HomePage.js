@@ -3,6 +3,7 @@ import Page from './PageComponent';
 
 import AboutCard from './cards/aboutCard';
 import HistoryCard from './cards/historyCard';
+import StatsCard from './cards/statsCard';
 import FacebookContainer from './facebookContainer';
 
 
@@ -17,6 +18,7 @@ class Body extends Component {
                             <AboutCard />
                         </div>
                         <div className="col-6">
+                            <StatsCard />
                             <HistoryCard />
                         </div>
                         

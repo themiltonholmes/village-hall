@@ -39,9 +39,6 @@ class App extends Component {
           <Route exact path="/calendar" component={Calendar} />
         </div>
         </Router>
-        <footer id="footer" className="footer">
-          <p class="text-muted">Developed by Michael Hoe</p>
-        </footer>
       </div>
     );
   }
