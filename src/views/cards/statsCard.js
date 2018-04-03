@@ -4,11 +4,10 @@ const AboutCard = () => {
     return (
         <div className="card">
             <div className="card-body">
-                <h2 className="sr-only">Features and Specification</h2>
+                <h2>Features and Specification</h2>
                 <div className="row">
-                    <div className="col-md-6">
-                        <h3>Features</h3>
-                        <ul className="list-unstyled">
+                    <div className="col-xl-6">
+                        <ul>
                             <li>Stage (with Spot and Stage Lighting)</li>
                             <li>PA System</li>
                             <li>Loop Hearing System</li>
@@ -16,12 +15,12 @@ const AboutCard = () => {
                             <li>Guest WiFi</li>
                         </ul>
                     </div>
-                    <div className="col-md-6">
-                        <h3>Specification</h3>
-                        <dl className="row">
-                            <dt className="col-9">Capacity</dt><dd className="col-3">360</dd>
-                            <dt className="col-9">Parking Spaces</dt><dd className="col-3">89</dd>
-                            <dt className="col-9">Theatre Seating License</dt><dd className="col-3">265</dd>
+                    <div className="col-xl-6">
+                        <h3 className="sr-only">Specification</h3>
+                        <dl>
+                            <dt >Capacity</dt><dd >360</dd>
+                            <dt >Parking Spaces</dt><dd >89</dd>
+                            <dt >Theatre Seating License</dt><dd >265</dd>
                         </dl>
                     </div>
                 </div>

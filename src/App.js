@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <Router>
         <div>
-          <header className="navbar navbar-expand-lg navbar-light bg-light">
+          <header className="navbar navbar-expand-lg navbar-dark">
               <h1 className="navbar-brand mb-0 h1">Willand Village Hall</h1>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
