@@ -19,7 +19,7 @@ const AboutCard = () => {
                         <h3 className="sr-only">Specification</h3>
                         <dl>
                             <dt >Capacity</dt><dd >360</dd>
-                            <dt >Parking Spaces</dt><dd >89</dd>
+                            <dt >Parking Spaces</dt><dd >49</dd>
                             <dt >Theatre Seating License</dt><dd >265</dd>
                         </dl>
                     </div>

@@ -14,13 +14,15 @@ class Body extends Component {
             <Page title="home">
                 <div className="row">
                     <div id="home-main" className="col-md-8 row">
-                        <div className="col-md-6">
                             <AboutCard />
-                        </div>
+                            <div className="row"> 
                         <div className="col-md-6">
                             <StatsCard />
+                        </div>
+                        <div className="col-md-6">
                             <HistoryCard />
                         </div>
+                            </div>
                         
                     </div>
                     <div id="home-sidebar" className="col-md-4 container align-content-center">
