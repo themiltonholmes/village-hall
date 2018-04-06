@@ -36,3 +36,9 @@ iframe {
   height: 100px;
 }
 
+/* maps */
+
+.maps-iframe {
+  height: 500px;
+  border: none;
+}
