@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Page from './PageComponent';
 import CalendarContainer from './calendarContainer';
 
-class Body extends Component {
+class CalendarPage extends Component {
     render() {
       return (
         <Page title="calendar">
@@ -17,4 +17,4 @@ class Body extends Component {
     }
   }
   
-export default Body;
+export default CalendarPage;

@@ -8,7 +8,7 @@ import FacebookContainer from './facebookContainer';
 
 
 
-class Body extends Component {
+class HomePage extends Component {
     render() {
         return (
             <Page title="home">
@@ -34,4 +34,4 @@ class Body extends Component {
     }
 }
 
-export default Body;
+export default HomePage;

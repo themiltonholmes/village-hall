@@ -29,3 +29,10 @@ iframe {
   color: white;
 }
 
+/* Contact Card */
+
+.contact-img {
+  width: 100px;
+  height: 100px;
+}
+
