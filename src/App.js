@@ -41,6 +41,7 @@ class App extends Component {
 
             </div>
           </header>
+          <div className="alert alert-warning"><h2>Site Under Development</h2><span>Please bare with us.</span></div>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/calendar" component={CalendarPage} />
           <Route exact path="/contact" component={ContactPage} />
