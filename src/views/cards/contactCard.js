@@ -5,10 +5,8 @@ const ContactCard = (contact) => {
       return (
         <div className="card">
             <div className="card-body">
-            <div className="media">
-                <img className="contact-img mr-3" src={process.env.PUBLIC_URL + '/images/' + contact.imgSrc} alt="" />
                 <div className="media-body">
-                    <h3 className="mt-0">{contact.name}</h3>
+                    <h3 className="card-title">{contact.role}</h3>
 
                     <dl>
                         {(contact.telephone) && <span>
@@ -24,7 +22,6 @@ const ContactCard = (contact) => {
                     </dl>
                     
                 </div>
-            </div>
             </div>
         </div>
       );

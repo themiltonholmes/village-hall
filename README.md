@@ -45,6 +45,12 @@ npm run build
 
 and copy the contents of build/ to the server.
 
+### Modifying the site without a developer
+
+If you want to add / modify the contacts on the Contacts page, you can do so without delving into the codebase.
+
+contacts.json is stored in the /data directory, which can be accessed on the server and edited in your text editor of choice.
+
 ## Authors
 
 * **Michael Hoe**

@@ -2,41 +2,31 @@ import React, { Component } from 'react';
 import Page from './PageComponent';
 import ContactCard from './cards/contactCard';
 import MapsContainer from './mapsContainer';
-
-
-const contacts = [
-    {
-        name: "Bookings",
-        imgSrc: "person-placeholder.png",
-        telephone: "123",
-        email: "bookings@mail"
-    },
-    {
-        name: "Caretaker",
-        imgSrc: "person-placeholder.png",
-        telephone: "456"
-    },
-    {
-        name: "Chairperson",
-        imgSrc: "person-placeholder.png",
-        telephone: "890",
-        email: "person@mail"
-    },
-    {
-        name: "Treasurer",
-        imgSrc: "person-placeholder.png",
-        telephone: "090",
-    }
-]
+import { fetchContacts } from '../services/contactsService';
 
 class ContactPage extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            contacts: []
+        }
+    }
+
+    componentDidMount() {
+        fetchContacts( (resp) => {
+            this.setState({contacts: resp});
+        } )
+    }
+
     render() {
         return (
             <Page title="contact-us">
             <div className="row">
             <div className="col-md-6">
                 <h2>Contacts</h2>
-                {contacts.map( (contact) => {
+                {this.state.contacts.map( (contact) => {
                     return <div key={contact.name}>
                     <ContactCard {...contact} />
                     </div>
