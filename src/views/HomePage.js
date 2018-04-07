@@ -13,20 +13,22 @@ class HomePage extends Component {
         return (
             <Page title="home">
                 <div className="row">
-                    <div id="home-main" className="col-md-8 row">
+                    <div id="home-main" className="col-md-8">
                             <AboutCard />
                             <div className="row"> 
-                        <div className="col-md-6">
-                            <StatsCard />
-                        </div>
-                        <div className="col-md-6">
-                            <HistoryCard />
-                        </div>
+                                <div className="col-md-6">
+                                    <StatsCard />
+                                </div>
+                                <div className="col-md-6">
+                                    <HistoryCard />
+                                </div>
                             </div>
                         
                     </div>
-                    <div id="home-sidebar" className="col-md-4 container align-content-center">
+                    <div id="home-sidebar" className="col-md-4 align-content-center">
+                        <div className="col-12">
                         <FacebookContainer />
+                        </div>
                     </div>
                 </div>
             </Page>

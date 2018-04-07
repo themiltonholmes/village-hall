@@ -18,6 +18,10 @@ iframe {
   margin-bottom: 1em;
 }
 
+#home-sidebar {
+  padding-bottom: 2em;
+}
+
 
 /* Brand */
 
@@ -41,4 +45,30 @@ iframe {
 .maps-iframe {
   height: 500px;
   border: none;
+}
+
+/* facebook */
+
+@media (max-width: 576px) { 
+
+  .big-facebook {
+    display: none;
+  }
+
+  .small-facebook {
+    display: inherit;
+  }
+
+}
+
+@media (min-width: 576px) { 
+
+  .small-facebook {
+    display: none;
+  }
+
+  .big-facebook {
+    display: inherit;
+  }
+
 }
