@@ -1,9 +1,74 @@
+/* utility */
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+.page-body {
+  margin-top: 1em;
+}
+
 iframe {
   width: 100%;
+}
+
+.card {
+  margin-bottom: 1em;
+}
+
+#home-sidebar {
+  padding-bottom: 2em;
+}
+
+
+/* Brand */
+
+.navbar {
+  background: #2e672d;
+}
+
+.navbar .navbar-nav .nav-item > .nav-link a {
+  color: white;
+}
+
+/* Contact Card */
+
+.contact-img {
+  width: 100px;
+  height: 100px;
+}
+
+/* maps */
+
+.maps-iframe {
+  height: 500px;
+  border: none;
+}
+
+/* facebook */
+
+@media (max-width: 576px) { 
+
+  .big-facebook {
+    display: none;
+  }
+
+  .small-facebook {
+    display: inherit;
+  }
+
+}
+
+@media (min-width: 576px) { 
+
+  .small-facebook {
+    display: none;
+  }
+
+  .big-facebook {
+    display: inherit;
+  }
+
 }
