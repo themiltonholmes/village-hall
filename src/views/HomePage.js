@@ -13,19 +13,19 @@ class HomePage extends Component {
         return (
             <Page title="home">
                 <div className="row">
-                    <div id="home-main" className="col-md-8">
+                    <div id="home-main" className="col-lg-8">
                             <AboutCard />
                             <div className="row"> 
-                                <div className="col-md-6">
+                                <div className="col-lg-6">
                                     <StatsCard />
                                 </div>
-                                <div className="col-md-6">
+                                <div className="col-lg-6">
                                     <HistoryCard />
                                 </div>
                             </div>
                         
                     </div>
-                    <div id="home-sidebar" className="col-md-4 align-content-center">
+                    <div id="home-sidebar" className="col-lg-4 align-content-center">
                         <div className="col-12">
                         <FacebookContainer />
                         </div>
