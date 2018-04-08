@@ -5,6 +5,7 @@ import AboutCard from './cards/aboutCard';
 import HistoryCard from './cards/historyCard';
 import StatsCard from './cards/statsCard';
 import FacebookContainer from './facebookContainer';
+import HallUsersCard from './cards/hallUsersCard';
 
 
 
@@ -27,6 +28,7 @@ class HomePage extends Component {
                     </div>
                     <div id="home-sidebar" className="col-lg-4 align-content-center">
                         <div className="col-12">
+                        <HallUsersCard />
                         <FacebookContainer />
                         </div>
                     </div>

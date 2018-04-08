@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Page from './PageComponent';
 import ContactCard from './cards/contactCard';
 import MapsContainer from './mapsContainer';
-import { fetchContacts } from '../services/contactsService';
+import { fetchContacts } from '../services/dataService';
 import AddressCard from './cards/addressCard';
 
 class ContactPage extends Component {
