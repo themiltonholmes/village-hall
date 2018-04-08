@@ -14,7 +14,6 @@ const CustomLink = ({ label, to, activeOnlyWhenExact }) => (
     path={to}
     exact={activeOnlyWhenExact}
     children={({ match }) => {
-        console.log(match);
         return ( <Link className={match ? "nav-link active" : "nav-link"} to={to}>{label}</Link> )
     }}
   />
