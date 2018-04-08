@@ -23,7 +23,7 @@ class HallUsersCard extends Component {
             <div className="card-body">
                 <h2 className="card-title">Our User's Sites</h2>
                 <div className="users-container">
-                <ul class="list-group list-group-flush">
+                <ul className="list-group list-group-flush">
                 {this.state.users.map( (user) => {
                     return <li className="list-group-item" key={user.name}>
                         <a target="_blank" href={user.url}>{user.name}</a>
