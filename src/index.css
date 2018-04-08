@@ -22,6 +22,10 @@ iframe {
   padding-bottom: 2em;
 }
 
+#booking-btn, #small-facebook {
+  margin-bottom: 1em;
+}
+
 
 /* Brand */
 
@@ -31,6 +35,11 @@ iframe {
 
 .navbar .navbar-nav .nav-item > .nav-link a {
   color: white;
+}
+
+a {
+  color: #2e662d;
+  font-weight: bold;
 }
 
 /* Contact Card */
