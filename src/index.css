@@ -61,6 +61,7 @@ a {
 .facebook-frame {
   border: none;
   width: 100%;
+  height: 500px;
 }
 
 @media (max-width: 576px) { 
