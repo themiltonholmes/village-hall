@@ -8,9 +8,9 @@ const BookingCard = () => {
                 <p>Please read <a target="_blank" href={`${process.env.PUBLIC_URL}/Documents/Wvh_Hire_Conditions.pdf`}>Our Hire Conditions</a></p>
                 <div className="form-link-container">
                     <ul className="list-group list-group-flush">
-                    <li className="list-group-item"><a href={`${process.env.PUBLIC_URL}/Documents/Wvh_Booking_Form_single_Event.pdf`} target="_blank" id="booking-btn">Single Event</a></li>
-                    <li className="list-group-item"><a href={`${process.env.PUBLIC_URL}/Documents/Wvh_Regular_Booking_Form.pdf`} target="_blank" id="booking-btn">Reoccuring Events</a></li>
-                </ul>
+                        <li className="list-group-item"><a href={`${process.env.PUBLIC_URL}/Documents/Wvh_Booking_Form_single_Event.pdf`} target="_blank" id="booking-btn">Single Event Bookings</a></li>
+                        <li className="list-group-item"><a href={`${process.env.PUBLIC_URL}/Documents/Wvh_Regular_Booking_Form.pdf`} target="_blank" id="booking-btn">Reoccuring Events Bookngs</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
