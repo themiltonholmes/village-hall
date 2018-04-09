@@ -42,6 +42,30 @@ a {
   font-weight: bold;
 }
 
+/* Calendar */
+
+h3.key-list-title, dl.key-list {
+  margin-bottom: 0px;
+}
+dl.key-list {
+  align-items: center;
+}
+
+.key-list dd, .key-list dt {
+  display: inline;
+}
+
+.key-list dd {
+  margin-right: 2em;
+}
+
+.key-square {
+  padding: 6px;
+  margin: 0px 10px;
+  display: inline-block;
+    border-radius: 50%;
+}
+
 /* Contact Card */
 
 .contact-img {

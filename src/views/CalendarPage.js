@@ -6,12 +6,8 @@ class CalendarPage extends Component {
     render() {
       return (
         <Page title="calendar">
-            <div className="card">
-                <div className="card-body">
-                    <h2 className="card-title">Events Calendar</h2>
-                <CalendarContainer />
-                </div>
-            </div>
+            <h2 className="card-title">Events Calendar</h2>
+            <CalendarContainer />
         </Page>
       );
     }
