@@ -22,6 +22,10 @@ class FacebookContainer extends Component {
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions.bind(this));
+  }
+
   updateDimensions() {
     const containerWidth = this.facebookContainerElement.clientWidth;
     this.setState({width: containerWidth});
