@@ -8,8 +8,15 @@ const AboutCard = () => {
             <div className="card-body">
                 <h2 className="card-title">About Us</h2>
                 <p className="card-text">
-                    Willand Village Hall, one of the largest in Devon, is situated just off the B3181, in Gables Road, Willand with easy access from all local areas and from junctions 27 and 28 of the M5.
-                    The Hall has a Public Entertainment and Theatre Licence under the Licensing Act 2003. The hall also benefits from having central heating throughout.
+                Willand Village Hall, one of the largest in Devon, is situated just off the B3181, in Gables road, Willand.
+                The idea for the hall was conceived in 1944 and officially opened in 1957 after using contract and a considerable amount of voluntary labour. 
+                It has been in its present form since 1976. The hall has a public entertainment and theatre licence under the licensing act 2003.
+                <br/>
+                <br/>
+                The hall benefits from solar panels and is currently half way through a 3 year refurbishment programme, which includes a new floor in the main hall, new lighting, internal & external doors, along with re decoration throughout.
+                <br/>
+                A tarmac car park has approx 49 spaces and is available for separate hire for car boot sales etc (please contact secretary for pricing)
+
                 </p>
             </div>
         </div>
