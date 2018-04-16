@@ -25,7 +25,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <div className="body-bg">
-            <header className="navbar navbar-expand-lg navbar-dark">
+            <header className="navbar sticky-top navbar-expand-lg navbar-dark">
               <a href="/"><h1 className="navbar-brand mb-0 h1">Willand Village Hall</h1></a>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -37,6 +37,9 @@ class App extends Component {
                   </li>
                   <li className="nav-item">
                       <CustomLink activeOnlyWhenExact={true} label="Event Calendar" to="/calendar" />
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href={`${process.env.PUBLIC_URL}/Documents/Floor_Plan.pdf`} target="_blank">Floor Plan</a>
                   </li>
                   <li className="nav-item">
                     <CustomLink activeOnlyWhenExact={true} label="Contact Us" to="/contact" />
