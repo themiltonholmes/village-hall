@@ -1,4 +1,5 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "react-image-gallery/styles/css/image-gallery.css";
 import 'bootstrap';
 import React, { Component } from 'react';
 import './index.css';
@@ -8,6 +9,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import HomePage from './views/HomePage';
 import CalendarPage from './views/CalendarPage';
 import ContactPage from './views/ContactPage';
+import GalleryPage from './views/GalleryPage';
 
 const CustomLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route
@@ -42,6 +44,9 @@ class App extends Component {
                     <a className="nav-link" href={`${process.env.PUBLIC_URL}/Documents/Floor_Plan.pdf`} target="_blank">Floor Plan</a>
                   </li>
                   <li className="nav-item">
+                    <CustomLink activeOnlyWhenExact={true} label="Gallery" to="/gallery" />
+                  </li>
+                  <li className="nav-item">
                     <CustomLink activeOnlyWhenExact={true} label="Contact Us" to="/contact" />
                   </li>
                 </ul>
@@ -50,6 +55,7 @@ class App extends Component {
             <div className="alert alert-warning"><h2>Site Under Development</h2><span>Please bear with us.</span></div>
             <Route exact path="/" component={HomePage} />
             <Route exact path="/calendar" component={CalendarPage} />
+            <Route exact path="/gallery" component={GalleryPage} />
             <Route exact path="/contact" component={ContactPage} />
           </div>
         </Router>
