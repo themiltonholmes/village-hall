@@ -11,6 +11,8 @@ class FacebookContainer extends Component {
       width: "300"
     }
 
+    this.facebookContainerElement = null;
+
     this.facebookContainer = element => {
       this.facebookContainerElement = element;
     }
@@ -27,8 +29,7 @@ class FacebookContainer extends Component {
   }
 
   updateDimensions() {
-    //TODO: Fix this for real
-    const containerWidth = (this.facebookContainerElement) ? this.facebookContainerElement.clientWidth : "300";
+    const containerWidth = this.facebookContainerElement.clientWidth;
     this.setState({width: containerWidth});
     this.url = `https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWillandVillageHall&tabs=timeline&width=${containerWidth}&height=500&small_header=false&adapt_container_width=true&hide_cover=true&show_facepile=true&appId`
   }
