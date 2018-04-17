@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
 import ImageGallery from 'react-image-gallery';
+import { fetchImageUrls } from '../services/dataService';
 
 class GalleryContainer extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            images: []
+        }
+    }
+
+    componentDidMount() {
+        fetchImageUrls( (resp) => {
+            this.setState({images: resp});
+        } )
+    }
     /**
      * This will take an array of image names:
      *  ["iamge.png","image23.jpg"]
@@ -20,7 +34,7 @@ class GalleryContainer extends Component {
      * 
      * @param {string} imageUrlArray array of image names, in string form. They must all be located in the images folder
      */
-    buildProperArray(imageUrlArray) {
+    _buildProperArray(imageUrlArray) {
         const finalArray = [];
         imageUrlArray.forEach(imageUrl => {
             finalArray.push({
@@ -32,15 +46,8 @@ class GalleryContainer extends Component {
     }
 
     render() {
-
-        const imageUrlArray = [
-            "IMG_20180401_120617.jpg",
-            "IMG_20180401_120625.jpg",
-            "IMG_20180401_120631.jpg"
-        ]
-
         return (
-            <ImageGallery showBullets={true} items={this.buildProperArray(imageUrlArray)} />
+            <ImageGallery showBullets={true} items={this._buildProperArray(this.state.images)} />
         );
     }
 
