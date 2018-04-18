@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 let prettyTel, sanitisedTel;
 
@@ -35,12 +34,6 @@ const ContactCard = (contact) => {
             </div>
         </div>
       );
-}
-
-ContactCard.PropTypes = {
-    name: PropTypes.string.isRequired,
-    telephone: PropTypes.string,
-    email: PropTypes.string
 }
   
 export default ContactCard;

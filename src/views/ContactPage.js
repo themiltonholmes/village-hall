@@ -27,8 +27,8 @@ class ContactPage extends Component {
             <div className="row">
             <div className="col-md-5">
                 <h2>Contacts</h2>
-                {this.state.contacts.map( (contact) => {
-                    return <div key={contact.name}>
+                {this.state.contacts.map( (contact,idx) => {
+                    return <div key={idx}>
                     <ContactCard {...contact} />
                     </div>
                 })}
