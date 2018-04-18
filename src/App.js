@@ -1,5 +1,6 @@
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "react-image-gallery/styles/css/image-gallery.css";
+import "photo-sphere-viewer/dist/photo-sphere-viewer.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import React, { Component } from 'react';
 import './index.css';
