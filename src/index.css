@@ -42,6 +42,12 @@ a {
   font-weight: bold;
 }
 
+/* Gallery */
+
+#gallery-card {
+  min-height: 400px;
+}
+
 /* Calendar */
 
 h3.key-list-title, dl.key-list {

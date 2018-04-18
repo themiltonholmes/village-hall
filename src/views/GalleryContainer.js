@@ -47,7 +47,7 @@ class GalleryContainer extends Component {
 
     render() {
         return (
-            <ImageGallery showBullets={true} items={this._buildProperArray(this.state.images)} />
+            <ImageGallery thumbnailPosition="top" showBullets={true} items={this._buildProperArray(this.state.images)} />
         );
     }
 

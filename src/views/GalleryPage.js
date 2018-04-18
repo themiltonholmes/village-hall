@@ -40,13 +40,13 @@ class GalleryPage extends Component {
                 <button onClick={() => this.clickButton("gallery")} className={(this.state.view === "gallery") ? "btn btn-primary" : "btn btn-light"}>Gallery</button>
               </div>
               <div className="btn-group ">
-                <button onClick={() => this.clickButton("mainPhotosphere")} className={(this.state.view === "mainPhotosphere") ? "btn btn-primary" : "btn btn-light"}>Photosphere</button>
+                <button onClick={() => this.clickButton("mainPhotosphere")} className={(this.state.view === "mainPhotosphere") ? "btn btn-primary" : "btn btn-light"}>Photosphere - Main Hall</button>
               </div>
             </div>
           </div>
         </div>
         <div className="card">
-        <div className="card-body">
+        <div id="gallery-card" className="card-body">
           {this.section()}
           </div>
           </div>
