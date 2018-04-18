@@ -12,13 +12,22 @@ class GalleryPage extends Component {
     }
   }
 
-  clickGalleryButton() {
-    this.setState({ view: "gallery" });
+  clickButton(string) {
+    this.setState({ view: string });
   }
 
-  clickPanoButton() {
-    this.setState({ view: "photospheres" });
+  section() {
+    switch (this.state.view) {
+      case "gallery":
+        return <GalleryContainer />
+      case "mainPhotosphere":
+        return <PanoContainer caption="Willand Village Main Hall" image="PANO_20180401_115103.jpg" />
+      default:
+        return <GalleryContainer />
+    }
   }
+
+
 
   render() {
     return (
@@ -26,18 +35,17 @@ class GalleryPage extends Component {
         <div className="card">
           <div className="card-body">
             <div className="btn-toolbar justify-content-center">
+              <div className="btn-group mr-2">
+                <button onClick={() => this.clickButton("gallery")} className={(this.state.view === "gallery") ? "btn btn-primary" : "btn btn-light"}>Gallery</button>
+              </div>
               <div className="btn-group ">
-                <button onClick={this.clickGalleryButton.bind(this)} className={(this.state.view === "gallery") ? "btn btn-primary" : "btn btn-secondary"}>Gallery</button>
-                <button onClick={this.clickPanoButton.bind(this)} className={(this.state.view === "photospheres") ? "btn btn-primary" : "btn btn-secondary"}>Photospheres</button>
+                <button onClick={() => this.clickButton("mainPhotosphere")} className={(this.state.view === "mainPhotosphere") ? "btn btn-primary" : "btn btn-light"}>Photosphere</button>
               </div>
             </div>
           </div>
         </div>
         <div className="container-fluid">
-          {(this.state.view === "gallery")
-            ? <GalleryContainer />
-            : <PanoContainer />
-          }
+          {this.section()}
         </div>
       </Page>
     );
