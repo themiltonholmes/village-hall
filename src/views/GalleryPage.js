@@ -21,7 +21,7 @@ class GalleryPage extends Component {
       case "gallery":
         return <GalleryContainer />
       case "mainPhotosphere":
-        return <PanoContainer caption="Willand Village Main Hall" image="PANO_20180401_115103.jpg" />
+        return <PanoContainer caption="Willand Village Main Hall" image="panorama.jpg" />
       default:
         return <GalleryContainer />
     }
@@ -32,6 +32,7 @@ class GalleryPage extends Component {
   render() {
     return (
       <Page title="gallery">
+        <div className="container-fluid">
         <div className="card">
           <div className="card-body">
             <div className="btn-toolbar justify-content-center">
@@ -44,8 +45,11 @@ class GalleryPage extends Component {
             </div>
           </div>
         </div>
-        <div className="container-fluid">
+        <div className="card">
+        <div className="card-body">
           {this.section()}
+          </div>
+          </div>
         </div>
       </Page>
     );

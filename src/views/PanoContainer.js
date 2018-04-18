@@ -19,12 +19,14 @@ class PanoContainer extends Component {
             panorama: `${process.env.PUBLIC_URL}/images/${this.props.image}`,
             container: this.panoElement.id,
             loading_img: 'https://raw.githubusercontent.com/mistic100/Photo-Sphere-Viewer/3.1.0/example/photosphere-logo.gif',
-            navbar: 'autorotate zoom download fullscreen',
+            navbar: 'autorotate zoom fullscreen caption',
             caption: this.props.caption,
             default_fov: 65,
+            gyroscope: "true",
             mousewheel: true,
+            move_speed: (this.panoElement.clientWidth > 700) ? 1 : 3,
             size: {
-              height: 400
+              height: 600
             }
           }); 
     }
