@@ -25,7 +25,7 @@ class Footer extends Component {
     render() {
 
         return (<footer className="footer">
-        <div className="container-fluid p-3 p-md-5">
+        <div className="container-fluid p-3 p-md-5 mt-4">
                 {(this.props.isFun && this.state.word.word) && <p>Word of the day is <b title={(this.state.word.definitions[0]) && this.state.word.definitions[0].text}>{this.state.word.word}</b> </p> }
               <p> <a className="badge badge-light" href="mailto:michaelpaulhoe+willandvillagehall@gmail.com">Website built by Michael Hoe</a></p>
               </div>
