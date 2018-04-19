@@ -28,7 +28,7 @@ class App extends Component {
 
   
   render() {
-    const underDevelopment = true;
+    const underDevelopment = false;
 
     return (
       <div className="App">

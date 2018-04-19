@@ -18,7 +18,7 @@ class FloorPlanPage extends Component {
     }
 
     componentDidMount() {
-        this.setState({width: this.element.clientWidth});
+        this.setState({ width: this.element.clientWidth });
     }
 
     floorPlanImage = [
@@ -31,30 +31,64 @@ class FloorPlanPage extends Component {
 
     renderFullscreenButton(onClick, isFullscreen) {
         return (
-          <button
-            type='button'
-            className={
-              `btn btn-primary m-3 image-gallery-fullscreen-button${isFullscreen ? ' active' : ''}`}
-            onClick={onClick}
-          />
+            <button
+                type='button'
+                className={
+                    `btn btn-primary m-3 image-gallery-fullscreen-button${isFullscreen ? ' active' : ''}`}
+                onClick={onClick}
+            />
         );
     }
 
     render() {
         return (
             <Page title="floorplan">
-            <div ref={this.containerRef} >
-                {(this.state.width < 700) && <div className="alert alert-info">Mobile users: pinch to zoom in on floorplan</div>}
-                <div className="card">
-                <ImageGallery 
-                showFullscreenButton={(this.state.width > 700) ? true : false} 
-                renderFullscreenButton={this.renderFullscreenButton}
-                showPlayButton={false} 
-                showThumbnails={false} 
-                items={this.floorPlanImage} 
-                />
-            </div>
-            </div>
+                <div ref={this.containerRef} >
+                    {(this.state.width < 700) && <div className="alert alert-info">Mobile users: pinch to zoom in on floorplan</div>}
+                    <div className="card">
+                        <ImageGallery
+                            showFullscreenButton={(this.state.width > 700) ? true : false}
+                            renderFullscreenButton={this.renderFullscreenButton}
+                            showPlayButton={false}
+                            showThumbnails={false}
+                            items={this.floorPlanImage}
+                        />
+                    </div>
+
+                    <div className="card">
+                    <div className="card-body">
+                        <h3 className="card-title" >Tables (available for any room)</h3>
+                        <table className="table table-sm col-3">
+                            <caption className="sr-only">Available tables and their dimensions</caption>
+                            <thead>
+                            <tr>
+                                <th scope="col">Dimensions</th> 
+                                <th scope="col">Quantity</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>2ft x 6ft</td>
+                                <td>3</td> 
+                            </tr>
+                            <tr>
+                                <td>6ft x 2.5ft</td>
+                                <td>18</td> 
+                            </tr>
+                            <tr>
+                                <td>2ft x 2ft</td>
+                                <td>34</td> 
+                            </tr>
+                            <tr>
+                                <td>3ft x 3ft</td>
+                                <td>6</td> 
+                            </tr>
+                            </tbody>
+                        </table>
+                        <p className="lead text-center">Also available: 265 chairs</p>
+                        </div>
+                    </div>
+                </div>
             </Page>
         );
     }
