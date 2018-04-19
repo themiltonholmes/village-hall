@@ -61,7 +61,7 @@ class App extends Component {
             <Route exact path="/contact" component={ContactPage} />
           </div>
         </Router>
-        <Footer />
+        <Footer isFun={true} />
       </div>
     );
   }
