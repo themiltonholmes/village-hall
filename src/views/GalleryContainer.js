@@ -45,9 +45,36 @@ class GalleryContainer extends Component {
         return finalArray;
     }
 
+    renderPlayPauseButton(onClick, isPlaying) {
+        return (
+          <button
+            type='button'
+            className={
+              `btn btn-primary m-3 image-gallery-play-button${isPlaying ? ' active' : ''}`}
+            onClick={onClick}
+          />
+        );
+    }
+
+    renderFullscreenButton(onClick, isFullscreen) {
+        return (
+          <button
+            type='button'
+            className={
+              `btn btn-primary m-3 image-gallery-fullscreen-button${isFullscreen ? ' active' : ''}`}
+            onClick={onClick}
+          />
+        );
+    }
+
     render() {
         return (
-            <ImageGallery thumbnailPosition="top" showBullets={true} items={this._buildProperArray(this.state.images)} />
+            <ImageGallery 
+            renderFullscreenButton={this.renderFullscreenButton}
+            renderPlayPauseButton={this.renderPlayPauseButton}
+            thumbnailPosition="top" 
+            showBullets={true} 
+            items={this._buildProperArray(this.state.images)} />
         );
     }
 

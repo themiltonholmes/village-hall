@@ -12,6 +12,7 @@ import CalendarPage from './views/CalendarPage';
 import ContactPage from './views/ContactPage';
 import GalleryPage from './views/GalleryPage';
 import Footer from "./views/footer";
+import FloorPlanPage from "./views/FloorPlanPage";
 
 const CustomLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route
@@ -27,7 +28,7 @@ class App extends Component {
 
   
   render() {
-    const underDevelopment = false;
+    const underDevelopment = true;
 
     return (
       <div className="App">
@@ -47,7 +48,7 @@ class App extends Component {
                       <CustomLink activeOnlyWhenExact={true} label="Event Calendar" to="/calendar" />
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href={`${process.env.PUBLIC_URL}/Documents/Floor_Plan.pdf`} target="_blank">Floor Plan</a>
+                    <CustomLink activeOnlyWhenExact={true} label="Floor Plan" to="/floorplan" />
                   </li>
                   <li className="nav-item">
                     <CustomLink activeOnlyWhenExact={true} label="Gallery" to="/gallery" />
@@ -63,6 +64,7 @@ class App extends Component {
             <Route exact path="/calendar" component={CalendarPage} />
             <Route exact path="/gallery" component={GalleryPage} />
             <Route exact path="/contact" component={ContactPage} />
+            <Route exact path="/floorplan" component={FloorPlanPage} />
           </div>
         </Router>
         <Footer isFun={true} />

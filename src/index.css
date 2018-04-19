@@ -64,6 +64,12 @@ a {
   font-weight: bold;
 }
 
+/* Floor Plan */
+
+.image-gallery-image {
+  background: white;
+}
+
 /* Gallery */
 
 #gallery-card {

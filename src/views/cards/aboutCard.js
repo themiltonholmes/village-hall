@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutCard = () => {
-    const HallImage = `${process.env.PUBLIC_URL}/images/vectorHall.png`;
+    const HallImage = `${process.env.PUBLIC_URL}/images/coverImage.png`;
     return (
         <div className="card">
             <img className="card-img-top" src={HallImage} alt="The outside of the village hall" />
