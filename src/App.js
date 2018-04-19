@@ -11,6 +11,7 @@ import HomePage from './views/HomePage';
 import CalendarPage from './views/CalendarPage';
 import ContactPage from './views/ContactPage';
 import GalleryPage from './views/GalleryPage';
+import Footer from "./views/footer";
 
 const CustomLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route
@@ -60,6 +61,7 @@ class App extends Component {
             <Route exact path="/contact" component={ContactPage} />
           </div>
         </Router>
+        <Footer />
       </div>
     );
   }

@@ -27,6 +27,12 @@ iframe {
 }
 
 
+.footer {
+  font-size: 85%;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
 /* Brand */
 
 .navbar {
