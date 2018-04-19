@@ -24,7 +24,11 @@ const CustomLink = ({ label, to, activeOnlyWhenExact }) => (
 );
 
 class App extends Component {
+
+  
   render() {
+    const underDevelopment = false;
+
     return (
       <div className="App">
         <Router>
@@ -54,7 +58,7 @@ class App extends Component {
                 </ul>
               </div>
             </header>
-            <div className="alert alert-warning"><h2>Site Under Development</h2><span>Please bear with us.</span></div>
+    {(underDevelopment) && <div className="alert alert-warning"><h2>Site Under Development</h2><span>Please bear with us.</span></div> }
             <Route exact path="/" component={HomePage} />
             <Route exact path="/calendar" component={CalendarPage} />
             <Route exact path="/gallery" component={GalleryPage} />
