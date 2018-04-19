@@ -46,6 +46,8 @@ class FloorPlanPage extends Component {
                 <div ref={this.containerRef} >
                     {(this.state.width < 700) && <div className="alert alert-info">Mobile users: pinch to zoom in on floorplan</div>}
                     <div className="card">
+                    <div className="card-body">
+                     <h3 className="card-title" >Floor Plan Diagram</h3>
                         <ImageGallery
                             showFullscreenButton={(this.state.width > 700) ? true : false}
                             renderFullscreenButton={this.renderFullscreenButton}
@@ -53,6 +55,7 @@ class FloorPlanPage extends Component {
                             showThumbnails={false}
                             items={this.floorPlanImage}
                         />
+                        </div>
                     </div>
 
                     <div className="card">
