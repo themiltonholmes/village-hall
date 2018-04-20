@@ -71,7 +71,7 @@ class FloorPlanPage extends Component {
                             </thead>
                             <tbody>
                             <tr>
-                                <td>2ft x 6ft</td>
+                                <td>6ft x 2ft</td>
                                 <td>3</td> 
                             </tr>
                             <tr>

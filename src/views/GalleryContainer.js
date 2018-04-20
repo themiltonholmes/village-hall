@@ -18,28 +18,17 @@ class GalleryContainer extends Component {
         } )
     }
     /**
-     * This will take an array of image names:
-     *  ["iamge.png","image23.jpg"]
-     * and convert it into the format that ImageGallery is after:
-     * [
-     *       {
-     *           original: `${process.env.PUBLIC_URL}/images/iamge.png`,
-     *           thumbnail: `${process.env.PUBLIC_URL}/images/iamge.png`,
-     *       },
-     *       {
-     *           original: `${process.env.PUBLIC_URL}/images/image23.jpg`,
-     *           thumbnail: `${process.env.PUBLIC_URL}/images/image23.jpg`,
-     *       }
-     * ]
-     * 
-     * @param {string} imageUrlArray array of image names, in string form. They must all be located in the images folder
+     * This will take an array of image objects and convert it into the format that ImageGallery is after:
+     * @param {string} imageArray array of image names, in string form. They must all be located in the images folder
      */
-    _buildProperArray(imageUrlArray) {
+    _buildProperArray(imageArray) {
         const finalArray = [];
-        imageUrlArray.forEach(imageUrl => {
+        imageArray.forEach(image => {
             finalArray.push({
-                original: `${process.env.PUBLIC_URL}/images/${imageUrl}`,
-                thumbnail: `${process.env.PUBLIC_URL}/images/${imageUrl}`
+                original: `${process.env.PUBLIC_URL}/images/${image.fileName}`,
+                thumbnail: `${process.env.PUBLIC_URL}/images/${image.fileName}`,
+                originalTitle: image.title,
+                description: image.title
             })
         });
         return finalArray;
@@ -72,6 +61,7 @@ class GalleryContainer extends Component {
             <ImageGallery 
             renderFullscreenButton={this.renderFullscreenButton}
             renderPlayPauseButton={this.renderPlayPauseButton}
+            showPlayButton={false}
             thumbnailPosition="top" 
             showBullets={true} 
             items={this._buildProperArray(this.state.images)} />
