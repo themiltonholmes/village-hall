@@ -53,6 +53,7 @@ iframe {
 
 .navbar {
   background: #2e672d;
+  border-bottom: #204a20 2px solid;
 }
 
 .navbar .navbar-nav .nav-item > .nav-link a {
@@ -62,6 +63,20 @@ iframe {
 a {
   color: #2e662d;
   font-weight: bold;
+}
+
+.btn-primary {
+  background: #4d964c;
+  border-color: #2e672d;
+}
+
+.btn-primary:hover {
+  background: #2e662d;
+  border-color: #2e672d;
+}
+
+.btn-light {
+  border-color: grey;
 }
 
 /* Floor Plan */
