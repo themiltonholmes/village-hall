@@ -21,7 +21,7 @@ class HallUsersCard extends Component {
         return (
             <div className="card">
             <div className="card-body">
-                <h2 className="card-title">Our User's Sites</h2>
+                <h2 className="card-title">Our Users' Sites</h2>
                 <div className="users-container">
                 <ul className="list-group list-group-flush">
                 {this.state.users.map( (user) => {
