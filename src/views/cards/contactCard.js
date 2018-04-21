@@ -1,7 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+let prettyTel, sanitisedTel;
 
 const ContactCard = (contact) => {
+
+    if(contact.telephone) {
+        //clean any spaces from the number
+        sanitisedTel = contact.telephone.replace(/\s/g, '');
+        //put in the space I want
+        prettyTel = sanitisedTel.slice(0,5) + ' ' + sanitisedTel.slice(5,10);  
+    } 
+
       return (
         <div className="card">
             <div className="card-body">
@@ -11,7 +20,7 @@ const ContactCard = (contact) => {
                     <dl>
                         {(contact.telephone) && <span>
                             <dt>Telephone</dt>
-                            <dd><a className="link" href={'tel:'+contact.telephone}>{contact.telephone}</a></dd>
+                            <dd><a className="link" href={'tel:'+ sanitisedTel}>{prettyTel}</a></dd>
                             </span>
                         }
                         {(contact.email) && <span>
@@ -25,12 +34,6 @@ const ContactCard = (contact) => {
             </div>
         </div>
       );
-}
-
-ContactCard.PropTypes = {
-    name: PropTypes.string.isRequired,
-    telephone: PropTypes.string,
-    email: PropTypes.string
 }
   
 export default ContactCard;

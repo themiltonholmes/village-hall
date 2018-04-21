@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Page from './PageComponent';
 
 import AboutCard from './cards/aboutCard';
-import HistoryCard from './cards/historyCard';
-import StatsCard from './cards/statsCard';
 import FacebookContainer from './facebookContainer';
+import HallUsersCard from './cards/hallUsersCard';
+import BookingCard from './cards/bookingCard';
+import NewStatsCard from './cards/newStatsCard';
 
 
 
@@ -13,20 +14,16 @@ class HomePage extends Component {
         return (
             <Page title="home">
                 <div className="row">
-                    <div id="home-main" className="col-md-8">
+                    <div id="home-main" className="col-lg-7">
                             <AboutCard />
-                            <div className="row"> 
-                                <div className="col-md-6">
-                                    <StatsCard />
-                                </div>
-                                <div className="col-md-6">
-                                    <HistoryCard />
-                                </div>
-                            </div>
+                            
+                            <NewStatsCard />
                         
                     </div>
-                    <div id="home-sidebar" className="col-md-4 align-content-center">
+                    <div id="home-sidebar" className="col-lg-5 align-content-center">
                         <div className="col-12">
+                        <BookingCard />
+                        <HallUsersCard />
                         <FacebookContainer />
                         </div>
                     </div>
