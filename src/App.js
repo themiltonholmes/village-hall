@@ -67,7 +67,7 @@ class App extends Component {
             <Route exact path="/floorplan" component={FloorPlanPage} />
           </div>
         </Router>
-        <Footer isFun={true} />
+        <Footer isFun={false} />
       </div>
     );
   }
