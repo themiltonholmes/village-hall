@@ -8,7 +8,7 @@ const ContactCard = (contact) => {
         //clean any spaces from the number
         sanitisedTel = contact.telephone.replace(/\s/g, '');
         //put in the space I want
-        prettyTel = sanitisedTel.slice(0,5) + ' ' + sanitisedTel.slice(5,10);  
+        prettyTel = sanitisedTel.slice(0,5) + ' ' + sanitisedTel.slice(5);  
     } 
 
       return (
