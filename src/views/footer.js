@@ -21,6 +21,13 @@ class Footer extends Component {
         });
     }
 
+    componentDidUpdate(prevProps) {
+        if(this.props.isFun !== prevProps.isFun) {
+            fetchWordOfTheDay((resp) => {
+                this.setState({word: resp});
+            });
+        }
+    }
 
     render() {
 
