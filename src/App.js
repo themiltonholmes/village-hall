@@ -13,18 +13,32 @@ import ContactPage from './views/ContactPage';
 import GalleryPage from './views/GalleryPage';
 import Footer from "./views/footer";
 import FloorPlanPage from "./views/FloorPlanPage";
+import { fetchConfig } from "./services/dataService";
 
 const CustomLink = ({ label, to, activeOnlyWhenExact }) => (
   <Route
     path={to}
     exact={activeOnlyWhenExact}
-    children={({ match }) => {
-        return ( <Link className={match ? "nav-link active" : "nav-link"} to={to}>{label}</Link> )
+  >
+    {({ match }) => {
+      return ( <Link className={match ? "nav-link active" : "nav-link"} to={to}>{label}</Link> )
     }}
-  />
+  </Route>
 );
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isFun: false
+    }
+  }
+
+  componentDidMount() {
+    fetchConfig( (config) => {
+      this.setState({isFun: config.isFun});
+    })
+  }
 
   
   render() {
@@ -67,7 +81,7 @@ class App extends Component {
             <Route exact path="/floorplan" component={FloorPlanPage} />
           </div>
         </Router>
-        <Footer isFun={false} />
+        <Footer isFun={this.state.isFun} />
       </div>
     );
   }

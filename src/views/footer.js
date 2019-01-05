@@ -15,12 +15,19 @@ class Footer extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         (this.props.isFun) && fetchWordOfTheDay((resp) => {
             this.setState({word: resp});
         });
     }
 
+    componentDidUpdate(prevProps) {
+        if(this.props.isFun !== prevProps.isFun) {
+            fetchWordOfTheDay((resp) => {
+                this.setState({word: resp});
+            });
+        }
+    }
 
     render() {
 

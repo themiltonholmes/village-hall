@@ -7,6 +7,10 @@ export const fetchContacts = (success) => {
     fetchFile('contacts', success);
 }
 
+export const fetchConfig  = (success) => {
+    fetchFile('config', success);
+}
+
 /**
  * This method will fetch the hall users from public/data/hallUsers.json
  * 
