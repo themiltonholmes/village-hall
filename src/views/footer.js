@@ -15,7 +15,7 @@ class Footer extends Component {
         }
     }
 
-    componentWillMount() {
+    componentDidMount() {
         (this.props.isFun) && fetchWordOfTheDay((resp) => {
             this.setState({word: resp});
         });

@@ -41,7 +41,7 @@ class FacebookContainer extends Component {
             <iframe title="facebook-page" className="facebook-frame" width={this.state.width} src={this.url}></iframe>
             </div>
             <div className="small-facebook">
-              <a target="_blank" href={facebookUrl}><span className="btn btn-primary col-12">Visit Our Facebook Page</span></a>
+              <a target="_blank" rel="noopener noreferrer" href={facebookUrl}><span className="btn btn-primary col-12">Visit Our Facebook Page</span></a>
             </div>
 
       </div>
