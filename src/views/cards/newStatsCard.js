@@ -15,6 +15,7 @@ const NewStatsCard = () => {
                                 <li>Loop Hearing System</li>
                                 <li>Use of main kitchen</li>
                                 <li>Use of tables and chairs</li>
+                                <li>4K Lumen Projector available to hire @ £6.50 per hour</li>
                                 <li>Guest WiFi (free)</li>
                             </ul>
                         </li>
@@ -23,6 +24,7 @@ const NewStatsCard = () => {
                         <ul>
                             <li>Use of main kitchen</li>
                             <li>Use of tables and chairs</li>
+                            <li>3K Lumen Projector available to hire @ £5 per hour</li>
                             <li>Guest WiFi (free)</li>
                         </ul>
                         </li>
